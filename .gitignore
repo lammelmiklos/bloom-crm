@@ -1,6 +1,7 @@
 # https://djangowaves.com/tips-tricks/gitignore-for-a-django-project/
-myenv
+myenv/
 sqlite3.exe
+*migrations/
 
 # Django #
 *.log
