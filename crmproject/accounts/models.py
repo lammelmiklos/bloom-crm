@@ -34,13 +34,12 @@ class Order(models.Model):
         ('Pending', 'Pending'),
         ('Out for delivery', ' Out for delivery'),
         ('Delivered', 'Delivered'),
-
     )
 
-    #customer = 
-    #product = 
+    customer = models.ForeignKey(Customer, null=True, on_delete=models.SET_NULL)
+    product = models.ForeignKey(Product, null=True, on_delete=models.SET_NULL)
     date_created = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=200, null=True, choices=STATUS)
 
     def __str__(self) -> str:
-        return f"Order status: {self.status}"
+        return f"{self.customer.firstname} {self.customer.lastname} ordered {self.product.name} and the status is: {self.status}"
