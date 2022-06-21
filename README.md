@@ -11,9 +11,24 @@ django-admin startproject <projectname>
 python manage.py runserver
 python manage.py startapp <appname>
 
+This creates a much nicer Django shell
+pip install ipython 
+python manage.py shell
+
 
 TODO: 
 - fix the secret key issue
 
 
+
+Set up Vs Code for Django - put this in settings.json:
+
+  "files.associations": {
+    "**/*.html": "html",
+    "**/templates/**/*.html": "django-html",
+    "**/templates/**/*": "django-txt",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements",
+  },
+    
+  "emmet.includeLanguages": {"django-html": "html"},
 

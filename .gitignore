@@ -2,6 +2,7 @@
 myenv/
 sqlite3.exe
 *migrations/
+*code-workspace
 
 # Django #
 *.log
